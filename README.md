@@ -26,41 +26,7 @@ QuizMind AI lets you upload any study document (PDF, TXT, Markdown, HTML) and in
 The core of this project is a **Retrieval-Augmented Generation (RAG) pipeline** built entirely from scratch without using LangChain or any RAG framework.
 
 ```
-📄 Document Upload
-       │
-       ▼
-┌─────────────────┐
-│  Text Extraction │  ← PDF / TXT / MD / HTML
-└────────┬────────┘
-         │
-         ▼
-┌─────────────────┐
-│  Text Chunking   │  ← Split into overlapping chunks (lib/chunker.ts)
-└────────┬────────┘
-         │
-         ▼
-┌──────────────────────┐
-│  Vector Embeddings    │  ← HuggingFace all-MiniLM-L6-v2 (lib/embedder.ts)
-└────────┬─────────────┘
-         │
-         ▼
-┌──────────────────────┐
-│  Turso Vector Store   │  ← Store chunks + embeddings (lib/db.ts)
-└────────┬─────────────┘
-         │
-         ▼
-┌──────────────────────┐
-│  Similarity Search    │  ← Cosine similarity retrieval
-└────────┬─────────────┘
-         │
-         ▼
-┌──────────────────────┐
-│  Groq LLM (LLaMA 3)  │  ← Generate quiz questions from context
-└────────┬─────────────┘
-         │
-         ▼
-🎯 Interactive Quiz + Results
-```
+![RAG Pipeline Flowchart](rag_flowchart.png)
 
 ---
 
