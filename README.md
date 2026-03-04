@@ -25,11 +25,8 @@ QuizMind AI lets you upload any study document (PDF, TXT, Markdown, HTML) and in
 
 The core of this project is a **Retrieval-Augmented Generation (RAG) pipeline** built entirely from scratch without using LangChain or any RAG framework.
 
-```
 ![RAG Pipeline Flowchart](rag_flowchart.png)
-
 ---
-
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
